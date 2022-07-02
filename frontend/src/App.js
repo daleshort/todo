@@ -32,7 +32,7 @@ function App() {
           </Container>
       </Navbar>
       <Container>
-       <TodoForm />
+       <TodoForm todos={todos} setTodos={setTodos}/>
         <TodoList todos={todos} setTodos={setTodos}/>
       </Container>
     </div>
