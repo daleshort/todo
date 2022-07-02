@@ -6,9 +6,19 @@ import Form from "react-bootstrap/Form"
 import Button from "react-bootstrap/Button";
 
 export default function TodoForm(){
+   const [name, setName] = useState("");
+   
+    const handleChange = e => {
+        setName(e.target.value);
+    }
+
     return <Form>
-        <InputGroup classname = "mb-4">
-            <FormControl placeholder="New Todo" />
+        <InputGroup className = "mb-4">
+            <FormControl 
+            placeholder="New Todo"
+            onChange={handleChange}
+            value = {name} 
+                        />
                 <Button type="submit">
                     Add
                 </Button>
