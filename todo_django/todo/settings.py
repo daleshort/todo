@@ -1,3 +1,5 @@
+from .config import config
+
 """
 Django settings for todo project.
 
@@ -20,7 +22,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-pkxzs@s2xb2ma2balg^sn@2*c7x5dungl5du6g&6!zja97yg3d'
+SECRET_KEY = config.secret_key
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -37,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'rest_framework', #dale added this on his own
+    'rest_framework',  # dale added this on his own
     'todos'
 ]
 
