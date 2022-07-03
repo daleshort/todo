@@ -164,3 +164,4 @@ cython_debug/
 
 # security ignore
 todo_django/todo/config.py
+todo_django/todo/my.cnf

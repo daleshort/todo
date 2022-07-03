@@ -1,5 +1,7 @@
 from .config import config
 
+import pymysql
+
 """
 Django settings for todo project.
 
@@ -77,12 +79,29 @@ WSGI_APPLICATION = 'todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'OPTIONS': {
+            'read_default_file': './todo/my.cnf',
+        },
     }
 }
+# Fake PyMySQL’s version and install as MySQLdb
+
+# https://adamj.eu/tech/2020/02/04/how-to-use-pymysql-with-django/
+
+pymysql.version_info = (1, 4, 2, 'final', 0)
+
+pymysql.install_as_MySQLdb()
+
+# my.cnf
+# [client]
+#database = NAME
+#user = USER
+#password = PASSWORD
+# default-character-set = utf8
 
 
 # Password validation
