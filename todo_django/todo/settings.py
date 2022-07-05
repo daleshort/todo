@@ -30,7 +30,7 @@ SECRET_KEY = config.secret_key
 DEBUG = True
 
 ALLOWED_HOSTS = ['http://64.227.29.102', '64.227.29.102']
-CSRF_TRUSTED_ORIGINS = ['http://64.227.29.102','64.227.29.102']
+CSRF_TRUSTED_ORIGINS = ['http://64.227.29.102']
 
 # Application definition
 
