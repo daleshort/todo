@@ -27,7 +27,7 @@ function App() {
       }}>
           <Container>
             <Navbar.Brand href = "#">
-              Todo App
+              Todo App2
             </Navbar.Brand>
           </Container>
       </Navbar>
